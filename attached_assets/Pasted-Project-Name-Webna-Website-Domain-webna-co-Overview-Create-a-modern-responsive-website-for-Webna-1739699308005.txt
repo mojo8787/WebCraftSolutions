@@ -1,0 +1,36 @@
+Project Name: Webna Website
+Domain: webna.co
+Overview:
+Create a modern, responsive website for Webna. Our company provides IT solutions, AI development, automation, data services, app development, and more. The design should reflect innovation, technology, and professionalism.
+
+Key Requirements:
+
+Responsive Design: The website must work seamlessly on desktop, tablet, and mobile devices.
+Clean UI/UX: Use a modern, minimalist design with a color scheme that reflects technology (e.g., blues, grays, and white) and dynamic elements where appropriate.
+Navigation: Include a clear navigation menu with the following sections:
+Home: A welcoming landing page with a brief introduction to Webna.
+About Us: Information about the company, our mission, and our team.
+Services: Detailed descriptions of our IT solutions, AI development, automation, data services, apps, etc.
+Portfolio/Case Studies (Optional): Showcase examples of our work.
+Contact: A contact form and contact information.
+Content:
+Use placeholder text and images that can later be replaced with real content.
+Ensure the homepage has a prominent call-to-action (CTA) such as “Get Started” or “Contact Us”.
+Technical Stack:
+Use HTML, CSS, and JavaScript (or a framework such as React if preferred) to build the website.
+If using React or another framework, include routing for navigation between pages.
+Additional Features:
+Incorporate smooth scrolling and animations where appropriate.
+Optimize for fast loading times and SEO best practices.
+Deliverables:
+
+A complete website codebase ready to be deployed on the domain webna.co.
+Well-commented code and documentation on how to run and update the site.
+Notes:
+
+Focus on creating a scalable and maintainable design.
+Ensure the website’s structure allows for future expansion (e.g., additional service pages, blog section, etc.).
+You can use placeholder images from free sources (e.g., Unsplash or Pexels) and lorem ipsum text for content placeholders.
+Objective:
+Create a visually appealing and functional website that effectively communicates our expertise in IT solutions and innovative technologies.
+
