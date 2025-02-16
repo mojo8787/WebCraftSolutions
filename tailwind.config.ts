@@ -27,6 +27,15 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          100: "hsl(213, 94%, 95%)",
+          200: "hsl(213, 94%, 90%)",
+          300: "hsl(213, 94%, 80%)",
+          400: "hsl(213, 94%, 70%)",
+          500: "hsl(213, 94%, 48%)",
+          600: "hsl(213, 94%, 40%)",
+          700: "hsl(213, 94%, 32%)",
+          800: "hsl(213, 94%, 25%)",
+          900: "hsl(213, 94%, 20%)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,16 +56,6 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
       },
       keyframes: {
         "accordion-down": {
