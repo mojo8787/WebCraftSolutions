@@ -51,6 +51,15 @@ export default function BookingCalendar() {
   });
 
   const onSubmit = async (data: BookingFormValues) => {
+    if (!selectedDate) {
+      toast({
+        title: "Error",
+        description: "Please select a date first",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     try {
       await apiRequest("POST", "/api/bookings", {
         ...data,
@@ -60,6 +69,7 @@ export default function BookingCalendar() {
         title: "Booking confirmed!",
         description: "We'll send you a confirmation email shortly.",
       });
+      setSelectedDate(undefined);
       setIsDialogOpen(false);
       form.reset();
     } catch (error) {
