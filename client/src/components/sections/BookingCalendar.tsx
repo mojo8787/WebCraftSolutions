@@ -94,6 +94,9 @@ export default function BookingCalendar() {
         <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Book a Consultation</DialogTitle>
+            <DialogDescription>
+              Select a date and time for your consultation.
+            </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <DayPicker

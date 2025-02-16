@@ -40,15 +40,15 @@ const Navbar = () => {
             isRTL && "space-x-reverse"
           )}>
             {links.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className={cn(
-                    "text-gray-600 hover:text-primary transition-colors",
-                    location === link.href && "text-primary font-medium"
-                  )}
-                >
-                  {link.label}
-                </a>
+              <Link 
+                key={link.href} 
+                href={link.href}
+                className={cn(
+                  "text-gray-600 hover:text-primary transition-colors",
+                  location === link.href && "text-primary font-medium"
+                )}
+              >
+                {link.label}
               </Link>
             ))}
             <Button asChild>
