@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -94,9 +94,9 @@ export default function BookingCalendar() {
         <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Book a Consultation</DialogTitle>
-            <DialogDescription>
+            <p className="text-sm text-gray-500">
               Select a date and time for your consultation.
-            </DialogDescription>
+            </p>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <DayPicker
