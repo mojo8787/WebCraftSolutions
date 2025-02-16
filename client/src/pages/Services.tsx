@@ -10,13 +10,18 @@ import {
   BarChart,
   Cloud,
   Shield,
+  Wifi,
+  Building2,
+  Factory,
+  Building,
+  Stethoscope
 } from "lucide-react";
 
 const Services = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
 
-  const services = [
+  const mainServices = [
     {
       icon: Brain,
       title: t('services.items.ai.title'),
@@ -37,26 +42,47 @@ const Services = () => {
       title: t('services.items.it.title'),
       description: t('services.items.it.description'),
     },
+  ];
+
+  const iotSolutions = [
+    {
+      icon: Wifi,
+      title: t('services.items.iot.sections.devices.title'),
+      description: t('services.items.iot.sections.devices.description'),
+    },
     {
       icon: Bot,
-      title: "Process Automation",
-      description: "Robotic Process Automation (RPA) and workflow optimization solutions.",
+      title: t('services.items.iot.sections.control.title'),
+      description: t('services.items.iot.sections.control.description'),
     },
     {
       icon: BarChart,
-      title: "Business Intelligence",
-      description: "Advanced analytics and reporting tools to gain insights from your data.",
+      title: t('services.items.iot.sections.analytics.title'),
+      description: t('services.items.iot.sections.analytics.description'),
+    }
+  ];
+
+  const iotApplications = [
+    {
+      icon: Building2,
+      title: t('services.items.iot.applications.buildings.title'),
+      description: t('services.items.iot.applications.buildings.description'),
     },
     {
-      icon: Cloud,
-      title: "Cloud Services",
-      description: "Cloud migration, management, and optimization services for scalable infrastructure.",
+      icon: Factory,
+      title: t('services.items.iot.applications.industrial.title'),
+      description: t('services.items.iot.applications.industrial.description'),
     },
     {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and data.",
+      icon: Building,
+      title: t('services.items.iot.applications.cities.title'),
+      description: t('services.items.iot.applications.cities.description'),
     },
+    {
+      icon: Stethoscope,
+      title: t('services.items.iot.applications.healthcare.title'),
+      description: t('services.items.iot.applications.healthcare.description'),
+    }
   ];
 
   return (
@@ -74,8 +100,9 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
@@ -83,6 +110,46 @@ const Services = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <ServiceCard {...service} />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* IoT Solutions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className={`text-center mb-8 ${isRTL ? 'text-right' : 'text-left'}`}
+        >
+          <h2 className="text-3xl font-bold text-gray-900">{t('services.items.iot.title')}</h2>
+          <p className="mt-4 text-lg text-gray-600">
+            {t('services.items.iot.description')}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {iotSolutions.map((solution, index) => (
+            <motion.div
+              key={solution.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ServiceCard {...solution} />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* IoT Applications */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {iotApplications.map((application, index) => (
+            <motion.div
+              key={application.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ServiceCard {...application} />
             </motion.div>
           ))}
         </div>

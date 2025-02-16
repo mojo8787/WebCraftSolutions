@@ -34,6 +34,42 @@
       "it": {
         "title": "IT Solutions",
         "description": "Comprehensive IT infrastructure management and support services."
+      },
+      "iot": {
+        "title": "IoT Solutions",
+        "description": "Advanced IoT integration for smarter, connected environments",
+        "sections": {
+          "devices": {
+            "title": "Smart Devices & Sensor Networks",
+            "description": "Advanced sensors and smart devices that monitor, collect, and analyze data in real time."
+          },
+          "control": {
+            "title": "Automated Control Systems",
+            "description": "Seamless integration of automated systems for smart buildings and industrial operations."
+          },
+          "analytics": {
+            "title": "Real-Time Analytics",
+            "description": "Transform sensor data into actionable insights for improved efficiency."
+          }
+        },
+        "applications": {
+          "buildings": {
+            "title": "Smart Buildings",
+            "description": "Enhance comfort, security, and energy efficiency through connected automation."
+          },
+          "industrial": {
+            "title": "Industrial Automation",
+            "description": "Optimize manufacturing with real-time monitoring and predictive maintenance."
+          },
+          "cities": {
+            "title": "Smart Cities",
+            "description": "Drive urban innovation with interconnected infrastructure solutions."
+          },
+          "healthcare": {
+            "title": "Healthcare & Agriculture",
+            "description": "IoT solutions for patient monitoring and precision farming."
+          }
+        }
       }
     }
   },
