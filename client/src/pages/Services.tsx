@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ServiceCard from "@/components/sections/ServiceCard";
+import { useTranslation } from "react-i18next";
 import {
   Brain,
   Code,
@@ -12,54 +13,49 @@ import {
 } from "lucide-react";
 
 const Services = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   const services = [
     {
       icon: Brain,
-      title: "AI Development",
-      description:
-        "Custom AI solutions including machine learning models, natural language processing, and computer vision systems.",
+      title: t('services.items.ai.title'),
+      description: t('services.items.ai.description'),
     },
     {
       icon: Code,
-      title: "App Development",
-      description:
-        "Full-stack web and mobile application development using modern frameworks and technologies.",
+      title: t('services.items.app.title'),
+      description: t('services.items.app.description'),
     },
     {
       icon: Database,
-      title: "Data Services",
-      description:
-        "Data management, analytics, and visualization solutions to help you make data-driven decisions.",
+      title: t('services.items.data.title'),
+      description: t('services.items.data.description'),
     },
     {
       icon: Cpu,
-      title: "IT Solutions",
-      description:
-        "Comprehensive IT infrastructure management and support services.",
+      title: t('services.items.it.title'),
+      description: t('services.items.it.description'),
     },
     {
       icon: Bot,
       title: "Process Automation",
-      description:
-        "Robotic Process Automation (RPA) and workflow optimization solutions.",
+      description: "Robotic Process Automation (RPA) and workflow optimization solutions.",
     },
     {
       icon: BarChart,
       title: "Business Intelligence",
-      description:
-        "Advanced analytics and reporting tools to gain insights from your data.",
+      description: "Advanced analytics and reporting tools to gain insights from your data.",
     },
     {
       icon: Cloud,
       title: "Cloud Services",
-      description:
-        "Cloud migration, management, and optimization services for scalable infrastructure.",
+      description: "Cloud migration, management, and optimization services for scalable infrastructure.",
     },
     {
       icon: Shield,
       title: "Cybersecurity",
-      description:
-        "Comprehensive security solutions to protect your digital assets and data.",
+      description: "Comprehensive security solutions to protect your digital assets and data.",
     },
   ];
 
@@ -70,11 +66,11 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className={`text-center mb-16 ${isRTL ? 'text-right' : 'text-left'}`}
         >
-          <h1 className="text-4xl font-bold text-gray-900">Our Services</h1>
+          <h1 className="text-4xl font-bold text-gray-900">{t('services.title')}</h1>
           <p className="mt-4 text-xl text-gray-600">
-            Comprehensive technology solutions for your business needs
+            {t('services.subtitle')}
           </p>
         </motion.div>
 
