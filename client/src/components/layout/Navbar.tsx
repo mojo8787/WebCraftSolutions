@@ -25,7 +25,12 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <a className="text-2xl font-bold text-primary">Webna</a>
+              <img 
+                src="/Logo_webna.svg" 
+                alt="Webna" 
+                className="h-8 w-auto"
+                style={{ height: '2.5rem' }}
+              />
             </Link>
           </div>
 

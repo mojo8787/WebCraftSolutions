@@ -7,13 +7,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link href="/">
-              <a className="text-2xl font-bold text-primary">Webna</a>
+              <img 
+                src="/Logo_webna.svg" 
+                alt="Webna" 
+                className="h-8 w-auto"
+                style={{ height: '2.5rem' }}
+              />
             </Link>
             <p className="mt-4 text-gray-600">
               Providing innovative IT solutions and digital transformation services.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -58,7 +63,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-600">
             © {new Date().getFullYear()} Webna. All rights reserved.

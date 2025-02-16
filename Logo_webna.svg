@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="1200" height="480">
+  <defs>
+    <!-- Smooth Animated Gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E55D2B">
+        <animate attributeName="stop-color" values="#E55D2B;#FF7043;#E55D2B" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#FF7043">
+        <animate attributeName="stop-color" values="#FF8E5C;#FF7043;#FF8E5C" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#FF8E5C">
+        <animate attributeName="stop-color" values="#FF8E5C;#E55D2B;#FF8E5C" dur="5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter for Text -->
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Smaller, More Compact Tail Shape -->
+    <path id="tailShape" d="
+      M100,130 
+      C130,90, 180,80, 230,110 
+      C270,130, 300,140, 330,120 
+      C360,100, 390,70, 420,90 
+      C450,110, 440,140, 410,160 
+      C380,180, 340,190, 310,200 
+      C280,210, 250,190, 220,170 
+      C190,150, 160,140, 140,130 
+      C120,120, 110,130, 100,130 
+      Z"/>
+  </defs>
+
+  <!-- Accessibility: Title and Description -->
+  <title>WEBNA LABS Logo</title>
+  <desc>Refined WEBNA LABS logo with a more compact tail, enhanced text, and smooth gradient animation.</desc>
+
+  <!-- Tail Group with Reduced Size -->
+  <g id="tailGroup" transform="translate(270,90) scale(0.6) translate(-270,-90)">
+    <!-- Background Tail Accent -->
+    <use href="#tailShape" transform="rotate(-6 270 90) translate(10 5)" fill="#FFE8DC" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="-6 270 90" to="2 270 90" dur="8s" repeatCount="indefinite" />
+    </use>
+
+    <!-- Main Tail -->
+    <use href="#tailShape" transform="rotate(-8 270 90)" fill="url(#mainGradient)">
+      <animateTransform attributeName="transform" type="rotate" from="-8 270 90" to="0 270 90" dur="8s" repeatCount="indefinite" />
+    </use>
+
+    <!-- Foreground Highlight for Depth -->
+    <use href="#tailShape" transform="rotate(-8 270 90) translate(-4 -2)" fill="#fff" opacity="0.15">
+      <animateTransform attributeName="transform" type="rotate" from="-8 270 90" to="0 270 90" dur="8s" repeatCount="indefinite" />
+    </use>
+  </g>
+
+  <!-- Company Name with Enhanced Styling -->
+  <g transform="translate(280 115)" aria-label="WEBNA LABS">
+    <text x="0" y="0" font-family="'Montserrat', sans-serif" font-weight="800"
+          font-size="48" fill="url(#mainGradient)" letter-spacing="-1.2" filter="url(#textShadow)">
+      WEBNA
+      <tspan x="0" y="50" font-weight="400" font-size="38" letter-spacing="0.2" fill="#2F2F2F">LABS</tspan>
+    </text>
+  </g>
+
+  <!-- Slogan Section: More Readable -->
+  <g transform="translate(300 200)">
+    <path fill="#E55D2B" d="M-115 0h230v3H-115z" opacity="0.9"/>
+    <text x="0" y="28" font-family="'Open Sans', sans-serif" font-size="19" text-anchor="middle" fill="#333" letter-spacing="1" font-weight="600">
+      WHERE DATA MEETS INGENUITY
+    </text>
+  </g>
+</svg>
