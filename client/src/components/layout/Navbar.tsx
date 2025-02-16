@@ -3,16 +3,20 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const isRTL = i18n.language === 'ar';
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: t('nav.home') },
+    { href: "/about", label: t('nav.about') },
+    { href: "/services", label: t('nav.services') },
+    { href: "/contact", label: t('nav.contact') },
   ];
 
   return (
@@ -26,7 +30,10 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className={cn(
+            "hidden md:flex items-center space-x-8",
+            isRTL && "space-x-reverse"
+          )}>
             {links.map((link) => (
               <Link key={link.href} href={link.href}>
                 <a
@@ -40,7 +47,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button asChild>
-              <Link href="/contact">Get Started</Link>
+              <Link href="/contact">{t('nav.getStarted')}</Link>
             </Button>
           </div>
 
@@ -75,7 +82,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Button asChild className="w-full">
-                <Link href="/contact">Get Started</Link>
+                <Link href="/contact">{t('nav.getStarted')}</Link>
               </Button>
             </div>
           </div>

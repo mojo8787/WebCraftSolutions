@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Transform your business",
+    "subtitle": "with innovative IT solutions",
+    "description": "We provide cutting-edge IT solutions, AI development, automation, and data services to help your business thrive in the digital age.",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "Learn More"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your digital transformation needs",
+    "items": {
+      "ai": {
+        "title": "AI Development",
+        "description": "Custom AI solutions including machine learning models, natural language processing, and computer vision systems."
+      },
+      "app": {
+        "title": "App Development",
+        "description": "Full-stack web and mobile application development using modern frameworks and technologies."
+      },
+      "data": {
+        "title": "Data Services",
+        "description": "Data management, analytics, and visualization solutions to help you make data-driven decisions."
+      },
+      "it": {
+        "title": "IT Solutions",
+        "description": "Comprehensive IT infrastructure management and support services."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent!",
+      "error": "Failed to send message. Please try again.",
+      "successDetail": "We'll get back to you as soon as possible."
+    },
+    "booking": {
+      "title": "Book a Consultation",
+      "submit": "Book Appointment",
+      "success": "Booking confirmed!",
+      "error": "Failed to book appointment. Please try again.",
+      "successDetail": "We'll send you a confirmation email shortly."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  }
+}
