@@ -5,9 +5,12 @@ import {
   type InsertService,
   type TeamMember,
   type InsertTeamMember,
+  type Booking,
+  type InsertBooking,
   contactSubmissions,
   services,
-  teamMembers
+  teamMembers,
+  bookings
 } from "@shared/schema";
 import { db } from "./db";
 import { desc, eq } from "drizzle-orm";
@@ -26,6 +29,11 @@ export interface IStorage {
   createTeamMember(data: InsertTeamMember): Promise<TeamMember>;
   getTeamMembers(): Promise<TeamMember[]>;
   getTeamMemberById(id: number): Promise<TeamMember | undefined>;
+
+  // Bookings
+  createBooking(data: InsertBooking): Promise<Booking>;
+  getBookings(): Promise<Booking[]>;
+  getBookingsByDate(date: Date): Promise<Booking[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -67,6 +75,24 @@ export class DatabaseStorage implements IStorage {
   async getTeamMemberById(id: number): Promise<TeamMember | undefined> {
     const [member] = await db.select().from(teamMembers).where(eq(teamMembers.id, id));
     return member;
+  }
+
+  // Bookings
+  async createBooking(data: InsertBooking): Promise<Booking> {
+    const [booking] = await db.insert(bookings).values(data).returning();
+    return booking;
+  }
+
+  async getBookings(): Promise<Booking[]> {
+    return await db.select().from(bookings).orderBy(desc(bookings.date));
+  }
+
+  async getBookingsByDate(date: Date): Promise<Booking[]> {
+    return await db
+      .select()
+      .from(bookings)
+      .where(eq(bookings.date, date))
+      .orderBy(bookings.time);
   }
 }
 

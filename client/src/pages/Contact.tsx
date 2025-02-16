@@ -15,6 +15,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
+import BookingCalendar from "@/components/sections/BookingCalendar";
+import { apiRequest } from "@/lib/queryClient";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -147,34 +149,44 @@ const Contact = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="space-y-8"
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              Contact Information
-            </h2>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">contact@webna.co</p>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">
+                Book a Consultation
+              </h2>
+              <BookingCalendar />
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">
+                Contact Information
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <Mail className="w-6 h-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Email</h3>
+                    <p className="text-gray-600">contact@webna.co</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                <div className="flex items-start space-x-4">
+                  <Phone className="w-6 h-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-900">Address</h3>
-                  <p className="text-gray-600">
-                    123 Tech Street<br />
-                    Innovation City, IC 12345<br />
-                    United States
-                  </p>
+                <div className="flex items-start space-x-4">
+                  <MapPin className="w-6 h-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Address</h3>
+                    <p className="text-gray-600">
+                      123 Tech Street<br />
+                      Innovation City, IC 12345<br />
+                      United States
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
