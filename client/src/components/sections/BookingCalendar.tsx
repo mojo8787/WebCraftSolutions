@@ -81,7 +81,7 @@ export default function BookingCalendar() {
         <DialogTrigger asChild>
           <Button className="w-full">Book a Consultation</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Book a Consultation</DialogTitle>
           </DialogHeader>
