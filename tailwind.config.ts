@@ -27,18 +27,18 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          100: "hsl(213, 94%, 95%)",
-          200: "hsl(213, 94%, 90%)",
-          300: "hsl(213, 94%, 80%)",
-          400: "hsl(213, 94%, 70%)",
-          500: "hsl(213, 94%, 48%)",
-          600: "hsl(213, 94%, 40%)",
-          700: "hsl(213, 94%, 32%)",
-          800: "hsl(213, 94%, 25%)",
-          900: "hsl(213, 94%, 20%)",
+          100: "hsl(225, 73%, 95%)",
+          200: "hsl(225, 73%, 90%)",
+          300: "hsl(225, 73%, 80%)",
+          400: "hsl(225, 73%, 70%)",
+          500: "hsl(225, 73%, 57%)",
+          600: "hsl(225, 73%, 47%)",
+          700: "hsl(225, 73%, 37%)",
+          800: "hsl(225, 73%, 27%)",
+          900: "hsl(225, 73%, 17%)"
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "hsl(195, 83%, 38%)",
           foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
